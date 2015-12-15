@@ -1,9 +1,12 @@
-function [xx , tt] = note ( dur )
+function [x,t] = note(f,dur) % note fonksiyonu oluþturdum. 
+ 
+ 
 
-ff = 0.2 * pi;
+t=0:1/(f*100):dur; %t aralýðýný tanýmladým. 
+x=sin(2*pi*f*t) %x deðiþkenini bir sinüs sinyaline eþitledim 
+	end %note fonksiyonunun bitiþi 
 
-tt  = linspace(ff,dur);
-
-xx = sin (tt);
-
-end
+%note fonksiyonunu çaðýrmak için
+ 
+[x,y]=note(6,10) 
+plot(y,x) 
