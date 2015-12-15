@@ -1,12 +1,21 @@
-Notolar Do dan Si ye doðru gittikçe frekanslarý artmaktadýr.Bu frekans artýmýda
+Metin Bakumdi
+030112041
+Sinyal Ýsleme
+MATLAB ile Sentezleme
+
+note.m dosyasinin; dosya tipi: bir matlab dosyasidir. içerigi: sinus sinyalini dondurecek kodlar
+
+frek.m dosyasinin; dosya tipi: bir matlab dosyasidir. icerigi: istenilen notalarin istenilen oktavdaki degerini dondurecek kodlar bulunur.
+
+notalar.txt dosyasinin; dosya tipi: bir metin dosyasidir. icerigi: muzigimizde bulunan notalar ve olculeri bu dosyada bulunmaktadir.
+
+notalar.png dosyasinin; dosya tipi: bir resim dosyasidir. icerigi: muzigimize ait notalarin bulundugu resim dosyasidir.
+
+sentez.m dosyasinin; dosya tipi: bir matlab dosyasidir. icerigi: bos
+
+
+Notalar Do dan Si ye doðru gittikçe frekanslarý artmaktadýr.Bu frekans artýmýda
 her Do sesinde oktavlara bölünmektedir.
 Her notanýn 1 birimlik oktav artýsý frekansýn 2 ye katlanmasýna sebep olmuþtur.
 Ör:2 oktavlýk Do sesi 65,41 frekansa sahipken 3 oktavlýk Do sesi
 65,41*2=130,8 (yaklasýk) frekansa sahip olmustur.
-
-note.m dosyasý için ;
-Fonksiyonu cagýrma
-
- 
-[xxS, yyS] = note( 100 )
-plot(yyS,xxS)
