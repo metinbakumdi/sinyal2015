@@ -1,12 +1,12 @@
-function [x,t] = note(f,dur) % note fonksiyonu oluþturdum. 
- 
- 
+function [x,t] = note(f,vurus) %fonksiyonu tanimliyoruz.girilicek argumanlari tanýmladýk
 
-t=0:1/(f*100):dur; %t aralýðýný tanýmladým. 
-x=sin(2*pi*f*t) %x deðiþkenini bir sinüs sinyaline eþitledim 
-	end %note fonksiyonunun bitiþi 
+fs=8192;
 
-%note fonksiyonunu çaðýrmak için
- 
-[x,y]=note(6,10) 
-plot(y,x) 
+t = 0:1/fs:(vurus-1/fs); %0 dan dur a kadar 1/(100*ff) kadar artýyor
+
+x = sin(2*pi*f*t); %bilgileri kullanarak sinüs olusturuyoruz
+
+
+%[xx,tt]=note(1,3);
+
+%plot(tt,xx)
