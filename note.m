@@ -1,12 +1,23 @@
-function [x,t] = note(f,vurus) %fonksiyonu tanimliyoruz.girilicek argumanlari tanýmladýk
+function [xx,tt]=note(frekans,vurus)  
+2 Fs=8192; 
+3 tt=0:1/Fs:((0.25-(1/Fs))/2);  
+4 zz=0; 
+5    xx=sin(2*pi*frekans*tt);  
+6 if length(xx)==length(zz)     
+7        zz=[linspace(0,1.5,Fs*vurus*(2/8)),linspace(1.5,1,Fs*vurus*(1/8)),linspace(1,1,Fs*vurus*(4/8)),linspace(1,0,Fs*vurus*(1/8))]; 
+8 end 
+9 end 
 
-fs=8192;
-
-t = 0:1/fs:(vurus-1/fs); %0 dan dur a kadar 1/(100*ff) kadar artýyor
-
-x = sin(2*pi*f*t); %bilgileri kullanarak sinüs olusturuyoruz
 
 
-%[xx,tt]=note(1,3);
 
-%plot(tt,xx)
+%[x,y]=note(90,1/8) 
+% plot(y,x) 
+ 
+% zz1=[linspace(0,1.5,8192*(1/8)*(2/8)),linspace(1.5,1,8192*(1/8)*(1/8)),linspace(1,1,8192*(1/8)*(4/8)),linspace(1,0,8192*(1/8)*(1/8))] 
+  %  plot(y,zz1)    
+%zz2=[linspace(0,-1.5,8192*(1/8)*(2/8)),linspace(-1.5,-1,8192*(1/8)*(1/8)),linspace(-1,-1,8192*(1/8)*(4/8)),linspace(-1,0,8192*(1/8)*(1/8))] 
+ %plot(y,zz2) 
+ %zz3=zz1.*zz2 
+ %carp=x.*zz3 
+ %plot(y,carp) 
