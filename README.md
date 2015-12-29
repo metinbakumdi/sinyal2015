@@ -11,7 +11,7 @@ notalar.txt dosyasinin; dosya tipi: bir metin dosyasidir. icerigi: muzigimizde b
 
 notalar.png dosyasinin; dosya tipi: bir resim dosyasidir. icerigi: muzigimize ait notalarin bulundugu resim dosyasidir.
 
-sentez.m dosyasinin; dosya tipi: bir matlab dosyasidir. icerigi: bos
+sentez.m dosyasinin; dosya tipi: bir matlab dosyasidir.
 
 
 Notalar Do dan Si ye doðru gittikçe frekanslarý artmaktadýr.Bu frekans artýmýda
