@@ -1,23 +1,21 @@
-function [xx,tt]=note(frekans,vurus)  
-2 Fs=8192; 
-3 tt=0:1/Fs:((0.25-(1/Fs))/2);  
-4 zz=0; 
-5    xx=sin(2*pi*frekans*tt);  
-6 if length(xx)==length(zz)     
-7        zz=[linspace(0,1.5,Fs*vurus*(2/8)),linspace(1.5,1,Fs*vurus*(1/8)),linspace(1,1,Fs*vurus*(4/8)),linspace(1,0,Fs*vurus*(1/8))]; 
-8 end 
-9 end 
-
-
-
-
-%[x,y]=note(90,1/8) 
-% plot(y,x) 
- 
-% zz1=[linspace(0,1.5,8192*(1/8)*(2/8)),linspace(1.5,1,8192*(1/8)*(1/8)),linspace(1,1,8192*(1/8)*(4/8)),linspace(1,0,8192*(1/8)*(1/8))] 
-  %  plot(y,zz1)    
-%zz2=[linspace(0,-1.5,8192*(1/8)*(2/8)),linspace(-1.5,-1,8192*(1/8)*(1/8)),linspace(-1,-1,8192*(1/8)*(4/8)),linspace(-1,0,8192*(1/8)*(1/8))] 
- %plot(y,zz2) 
- %zz3=zz1.*zz2 
- %carp=x.*zz3 
- %plot(y,carp) 
+  function [topla,t]=note(f,olcu)   
+  fs=8192; %örnekleme frekansi  
+  a=1;  
+  topla=0;  
+  harmonik={1 0.8 0.4 0.1}; % harmonik dizisi  
+  t=0:1/fs:olcu-(1/fs); %t araligi  
+   
+   
+  for h=1:length(harmonik)  
+     x=harmonik{h}*sin(2*pi*f*t*a); %harmonik hesabi  
+     topla=topla+x;%harmonikleri topluyorum  
+     a=a+1;  
+  end  
+     z1=linspace(0,1.5,length(t)/4);  
+     z2=linspace(1.5,1,length(t)/8);  
+     z3=linspace(1,1,length(t)/2);  
+     z4=linspace(1,0,length(t)/8);  
+     zarf=[z1 z2 z3 z4];  
+     x=x.*zarf;  
+   echo=((x-(fs/10))*30/100)+x; %echo yu hesapliyorum  
+  end  
