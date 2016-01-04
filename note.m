@@ -1,7 +1,7 @@
 %%Fonksiyon tanýmlanýr.  
 function [xx,t]=note(nfrekans,nsure)  %sinüs sinyali çizdiren fonksiyonu tanýmladýk.
-%%Deðerler belirlendi
 
+%%Deðerler belirlendi
   Fs=8192; %örnekleme frekansi  
   t=0:1/Fs:nsure-(1/Fs);     %t aralýgý tanýmlandý.
   harmonik={1 0.8 0.4 0.1}; % harmonik dizisi  
